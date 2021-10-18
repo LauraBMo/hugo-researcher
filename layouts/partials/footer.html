@@ -10,4 +10,9 @@
             <a href="{{ .url | absURL }}" title="{{ .text }}"><small>{{ .text }}</small></a>
         </div>
     {{ end }}
+    {{ with .Lastmod }}
+        <div class="container text-right">
+            <small>Last update {{ dateFormat "2 Jan 2006" . }}</small>
+        </div>
+     {{ end }}
 </div>
